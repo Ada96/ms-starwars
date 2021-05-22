@@ -68,8 +68,8 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONARCLOUD}}
         with:
           args: >
-          -Dsonar.organization=ada96
-          -Dsonar.projectKey=Ada96_ms-starwars
+            -Dsonar.organization=ada96
+            -Dsonar.projectKey=Ada96_ms-starwars
           projectBaseDir: ./
 
       # Runs a single command using the runners shell
