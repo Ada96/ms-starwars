@@ -27,6 +27,24 @@ jobs:
       
       - name: Install
         run: npm install
+        
+      #7.dodaj fazę unit test =>
+      - name: unit-test
+        run : npm run unit-tests   
+        
+      #8.dodaj fazę integration tests =>
+      - name: integration-test
+        run : npm run integration-tests 
+        
+      #9.dodaj fazę test report =>
+      - name: Test Report unit
+        uses: dorny/test-reporter@v1
+        if: success() || failure()
+        with:
+          name: mocha Tests unit
+          path: ./test-results.json
+          reporter: mocha-json
+      
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
