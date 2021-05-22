@@ -60,7 +60,7 @@ jobs:
           name: Depcheck report
           path: ${{github.workspace}}/reports
           
-      19.dodaj fazę sonar scan
+      #19.dodaj fazę sonar scan
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@v1.6
         env:
