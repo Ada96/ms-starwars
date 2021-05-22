@@ -44,7 +44,6 @@ jobs:
           name: mocha Tests unit
           path: ./test-results.json
           reporter: mocha-json
-      
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
