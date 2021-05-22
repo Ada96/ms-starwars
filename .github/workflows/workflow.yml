@@ -59,6 +59,18 @@ jobs:
         with:
           name: Depcheck report
           path: ${{github.workspace}}/reports
+          
+      19.dodaj fazę sonar scan
+      - name: SonarCloud Scan
+        uses: SonarSource/sonarcloud-github-action@v1.6
+        env:
+          GITHUB_TOKEN: ${{ secrets.GIT}}
+          SONAR_TOKEN: ${{ secrets.SONARCLOUD}}
+        with:
+          args: >
+          -Dsonar.organization=ada96
+          -Dsonar.projectKey=Ada96_ms-starwars
+          projectBaseDir: ./
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
