@@ -48,7 +48,7 @@ jobs:
           path: ./test-results.json
           reporter: mocha-json
           
-      #11.dodaj fazę dependency check=>
+      #11.dodaj fazę dependency check =>
       - name: Depcheck
         uses: dependency-check/Dependency-Check_Action@main
         id: Depcheck
