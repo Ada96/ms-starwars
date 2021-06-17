@@ -75,6 +75,17 @@ jobs:
             -Dsonar.projectKey=Ada96_ms-starwars
           projectBaseDir: ./
           
+        #23.dodaj fazy potrzebne do zbudowania obrazu dockerowego
+        - name: Set up QEMU
+        uses: docker/setup-qemu-action@v1
+        - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v1
+        - name: Login to JFroguses: docker/login-action@v1
+        with:
+          registry: wisit1.jfrog.io
+          username: ${{ secrets.JFROG_USERNAME }}
+          password: ${{ secrets.JFROG_PASSWORD }}
+          
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
