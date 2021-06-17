@@ -68,7 +68,7 @@ jobs:
         uses: SonarSource/sonarcloud-github-action@v1.6
         env:
           GITHUB_TOKEN: ${{ secrets.G_TOKEN}}
-          SONAR_TOKEN: ${{ secrets.S_TOKEN}}
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN}}
         with:
           args: >
             -Dsonar.organization=ada96
