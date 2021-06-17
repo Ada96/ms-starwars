@@ -23,8 +23,11 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      
+      #5. dodaj fazę checkout =>
       - uses: actions/checkout@v2
       
+      #6. dodaj fazę npm install =>
       - name: Install
         run: npm install
         
